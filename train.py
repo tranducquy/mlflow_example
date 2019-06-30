@@ -54,7 +54,7 @@ if __name__ == "__main__":
     if float(alpha) is None:
         alpha = 0.5
     else:
-        alpha = float(in_alpha)
+        alpha = float(alpha)
 
     # l1_ratioのデフォルト値を設定する
     if float(l1_ratio) is None:
