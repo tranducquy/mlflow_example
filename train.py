@@ -43,16 +43,16 @@ if __name__ == "__main__":
     test_y = test[["quality"]]
 
     # alphaのデフォルト値を設定する
-    if float(in_alpha) is None:
+    if float(alpha) is None:
         alpha = 0.5
     else:
         alpha = float(in_alpha)
 
     # l1_ratioのデフォルト値を設定する
-    if float(in_l1_ratio) is None:
+    if float(l1_ratio) is None:
         l1_ratio = 0.5
     else:
-        l1_ratio = float(in_l1_ratio)
+        l1_ratio = float(l1_ratio)
 
 
     # MLFlowに記録するため、MLFLow Trackingを起動する
