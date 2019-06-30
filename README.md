@@ -1,2 +1,2 @@
 # mlflow_example
-Example for training tensorflow model on mlflow
+Example for training ElasticNet model on mlflow
