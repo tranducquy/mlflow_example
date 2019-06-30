@@ -27,6 +27,11 @@ if __name__ == "__main__":
     warnings.filterwarnings("ignore")
     np.random.seed(40)
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--alpha')
+    parser.add_argument('--l1-ratio')
+    args = parser.parse_args()
+
     # wine-quality.csvのデータセットをDataFrameにロードする
     wine_quality_data_path = "https://raw.githubusercontent.com/mlflow/mlflow/master/examples/sklearn_elasticnet_wine/wine-quality.csv"
     data = pd.read_csv(wine_quality_data_path)
@@ -42,6 +47,8 @@ if __name__ == "__main__":
     train_y = train[["quality"]]
     test_y = test[["quality"]]
 
+    alpha = float(args.alpha)
+    l1_ratio = float(args.l1_ratio)
     # alphaのデフォルト値を設定する
     if float(alpha) is None:
         alpha = 0.5
