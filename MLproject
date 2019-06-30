@@ -1,7 +1,11 @@
-name: tensorflow-example
+name: mlflow-example
+
 conda_env: conda.yaml
 
 entry_points:
   main:
-    command: "python train_predict.py"
+    parameters:
+      alpha: float
+      l1_ratio: {type: float, default: 0.1}
+    command: "python train.py {alpha} {l1_ratio}"
 
