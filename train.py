@@ -85,5 +85,5 @@ if __name__ == "__main__":
         mlflow.log_metric("rmse", rmse)
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
-        mlflow.sklearn.save_model(lr, path='my_model_{0}_{1}'.format(in_alpha, in_l1_ratio))
-        mlflow.sklearn.log_model(lr, "model{0}_{1}".format(in_alpha, in_l1_ratio))
+        mlflow.sklearn.save_model(lr, path='my_model_{0}_{1}'.format(str(alpha), str(l1_ratio)))
+        mlflow.sklearn.log_model(lr, "model{0}_{1}".format(str(alpha), str(l1_ratio)))
